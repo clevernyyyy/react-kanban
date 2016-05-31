@@ -1,7 +1,5 @@
 .DS_Store
-_book/
 build/
 node_modules/
 *.diff
 *.log
-

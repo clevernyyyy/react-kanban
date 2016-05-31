@@ -7,7 +7,7 @@ export function createLane(lane) {
     type: CREATE_LANE,
     lane: Map({
       id: uuid.v4(),
-      notes: List(lane.notes || []),
+      cards: List(lane.cards || []),
       ...lane
     })
   };
@@ -30,20 +30,20 @@ export function deleteLane(id) {
 };
 
 export const ATTACH_TO_LANE = 'ATTACH_TO_LANE';
-export function attachToLane(laneId, noteId) {
+export function attachToLane(laneId, cardId) {
   return {
     type: ATTACH_TO_LANE,
     laneId,
-    noteId
+    cardId
   };
 };
 
 export const DETACH_FROM_LANE = 'DETACH_FROM_LANE';
-export function detachFromLane(laneId, noteId) {
+export function detachFromLane(laneId, cardId) {
   return {
     type: DETACH_FROM_LANE,
     laneId,
-    noteId
+    cardId
   };
 };
 

@@ -1,12 +1,12 @@
 import uuid from 'node-uuid';
 
 export const CREATE_CARD = 'CREATE_CARD';
-export function createNote(card) {
+export function createCard(card) {
   return {
     type: CREATE_CARD,
-    note: {
+    card: {
       id: uuid.v4(),
-      ...note
+      ...card
     }
   };
 };
